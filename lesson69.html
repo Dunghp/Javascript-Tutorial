@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #innerDiv{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+        }
+        #outDiv{
+            background-color: green;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outDiv">
+        <div id="innerDiv"></div>
+    </div>
+
+<script>
+    // .addEventListener(event, function, useCapture) can do multiple actions 
+    // even the same evests that invokes different functions.
+    const innerDiv = document.getElementById('innerDiv');
+    const outDiv = document.getElementById('outDiv');
+
+    innerDiv.addEventListener('click', changeBlue);
+    outDiv.addEventListener('click', changeBlue, true);
+
+    function changeBlue(){
+        alert(`You selected ${this.id}`);
+        this.style.backgroundColor = 'lightblue';
+    }
+</script>
+</body>
+</html>

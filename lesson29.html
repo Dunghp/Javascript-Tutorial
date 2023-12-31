@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2D = It is an array making up of arrays.</h1>
+
+<script>
+    let fruits = ['apples', 'oranges', 'bananas'];
+    let vegetables = ['carrots', 'onions', 'potatoes'];
+    let meats = ['eggs', 'chicken', 'fish'];
+
+    let groceryList = [fruits, vegetables, meats];
+    groceryList[0][1] = 'steak'; // rows & columns
+    // using nested loop
+    for(let list of groceryList){
+        for(let food of list){
+            console.log(food);
+        }
+    }
+</script>
+</body>
+</html>

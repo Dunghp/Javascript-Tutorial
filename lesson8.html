@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div{
+            margin-left: 150px;
+            font-size: 20px;
+            color: red;
+        }
+        button{
+            margin-left: 150px;
+            border-radius: 6px;
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leant about random</h1>
+    <div>
+        <label id="xlabel"></label>
+        <label id="ylabel"></label>
+        <label id="zlabel"></label>
+    </div>
+    <button id="rollButton">Roll</button>
+
+<script>
+    let x;
+    let y;
+    let z;
+
+    document.getElementById("rollButton").onclick = function(){
+        x = Math.floor(Math.random() * 9) + 0;
+        y = Math.floor(Math.random() * 9) + 0;
+        z = Math.floor(Math.random() * 9) + 0;
+
+        document.getElementById("xlabel").innerHTML = x;
+        document.getElementById("ylabel").innerHTML = y;
+        document.getElementById("zlabel").innerHTML = z;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>toLocaleString() = returns a string with a language
+                            sensitive representation of this number.<br>
+        number.toLocaleString(locale, {options}); <br>
+        'locale' = specify that language (undifined = default set in browsers) <br>
+        'options' = object with formatting options.
+    </h1>
+
+<script>
+    let myNum = 123456.789;
+
+    // myNum = myNum.toLocaleString("en-US");
+    // myNum = myNum.toLocaleString("hi-IN");
+    // myNum = myNum.toLocaleString("de-DE");
+
+    // myNum = myNum.toLocaleString("en-US", {style: "currency", currency: "USD"});
+    // myNum = myNum.toLocaleString("hi-IN", {style: "currency", currency: "INR"});
+    // myNum = myNum.toLocaleString("de-DE", {style: "currency", currency: "EUR"});
+    console.log(myNum);
+
+    let myPercent = 1;
+    myPercent = myPercent.toLocaleString(undefined, {style: "percent"});
+    console.log(myPercent);
+
+    let myDegree = 100;
+    myDegree = myDegree.toLocaleString(undefined, {style: "unit", unit: "celsius"});
+    console.log(myDegree);
+</script>
+</body>
+</html>

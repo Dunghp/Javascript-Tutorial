@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrow function = => compact alternative to a traditional function expression.</h1>
+
+
+<script>
+    // const greeting = function(userName){
+    //     console.log(`Hello ${userName}`);
+    // }
+    const greeting = userName => console.log(`Hello ${userName}`);
+    greeting("Pro");
+
+    // const percent = function(x, y){
+    //     return x/y * 100;
+    // }
+    // console.log(`${percent(70, 50)}%`);
+    const percent = (x, y) => x/y * 100;
+    console.log(`${percent(70, 50)}%`);
+
+    let grades = [100, 50, 90, 60, 70, 80];
+// <!---way 1-->
+    // grades.sort(descending);
+    // grades.forEach(print);
+
+    // function descending(x, y){
+    //     return y-x;
+    // };
+    // function print(element){
+    //     console.log(element);
+    // };
+// <!--way 2-->
+    // grades.sort(function(x, y){
+    //     return y-x;
+    // });
+    // grades.forEach(function(element){
+    //     console.log(element);
+    // });
+// <!--way 3-->
+    grades.sort((x, y) => y-x);
+    // grades = grades.sort((x, y) => y-x);
+    // grades.reverse(grades);
+    grades.forEach((element) => console.log(element));
+</script>
+</body>
+</html>

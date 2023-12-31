@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeout = invokes a function after a number of milliseconds <br>
+                    asynchronous function (doesn't pause execution).</h1>
+    <button id="myButton">Click here to Buy</button>
+<script>
+    let item = "cryptocurrency";
+    let price = 499;
+
+    let timer1 = setTimeout(firstMessage, 2000, item, price);
+    let timer2 = setTimeout(secondMessage, 3000);
+    let timer3 = setTimeout(thirdMessage, 5000);
+
+    function firstMessage(item, price){
+        alert(`Buy this ${item} for $${price}`);
+    }
+    function secondMessage(){
+        alert(`This is not a scam!`);
+    }
+    function thirdMessage(){
+        alert(`DO IT!`);
+    }
+
+    document.getElementById("myButton").onclick = function(){
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+        alert(`Thank YOU!`);
+    }
+</script>
+</body>
+</html>

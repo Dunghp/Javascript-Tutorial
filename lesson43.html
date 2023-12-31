@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this = reference to a particular object <br>
+                the object depends on the immediate context.</h1>
+
+<script>
+    const car1 = {
+        model: "Toyota",
+        color: "red",
+        year: 2020,
+
+        drive : function(){
+            console.log(`You drive the ${this.model}`);
+        }
+    }
+    const car2 = {
+        model: "HuynDai",
+        color: "blue",
+        year: 2000,
+
+        drive : function(){
+            console.log(`You drive the ${this.model}`);
+        }
+    }
+
+    car1.drive();
+    car2.drive();
+
+// this is the window object properity(this=window) if this using outside an object
+    this.name = "Coolwindow";
+    console.log(window.name); // we can replace this=window or using both
+</script>
+</body>
+</html>

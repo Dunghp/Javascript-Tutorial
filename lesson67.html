@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="aButton">Click me!</button>
+        <button id="bButton">Click me!</button>
+        <button id="cButton">Click me!</button>
+    </div>
+
+<script>
+    const atitle = document.getElementById("aButton");
+    const btitle = document.getElementById("bButton");
+    const ctitle = document.getElementById("cButton");
+
+    atitle.style.backgroundColor = 'lightgreen';
+    atitle.style.color = 'red';
+    atitle.style.fontFamily = 'Arials';
+    atitle.style.fontSize = '18px';
+    atitle.style.height = '50px';
+    atitle.style.width = '100px';
+    atitle.style.border = '6px solid blue';
+    atitle.style.borderRadius = '50%';
+    atitle.style.display = 'block';
+    atitle.style.cursor = 'pointer';
+    atitle.style.textAlign = 'center';
+
+    btitle.style.backgroundColor = 'skyblue';
+    btitle.style.color = 'red';
+    btitle.style.fontFamily = 'Arials';
+    btitle.style.fontSize = '18px';
+    btitle.style.height = '50px';
+    btitle.style.width = '100px';
+    btitle.style.border = '6px solid';
+    btitle.style.borderRadius = '6px';
+    btitle.style.display = 'block';
+    btitle.style.cursor = 'pointer';
+    btitle.style.textAlign = 'center';
+    btitle.style.opacity = '0.1';
+
+    ctitle.style.backgroundColor = 'transparent';
+    ctitle.style.color = 'red';
+    ctitle.style.fontFamily = 'Arials';
+    ctitle.style.fontSize = '16px';
+    ctitle.style.height = '50px';
+    ctitle.style.width = '100px';
+    ctitle.style.border = '6px solid green';
+    ctitle.style.borderRadius = '10px';
+    ctitle.style.display = 'block';
+    ctitle.style.cursor = 'pointer';
+    ctitle.style.textAlign = 'center';
+    ctitle.style.borderLeftWidth = '15px';
+    ctitle.style.paddingLeft = '0px';
+</script>
+</body>
+</html>

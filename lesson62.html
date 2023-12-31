@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>await = makes an async function wait for a Promis</h1>
+
+
+<script>
+    async function loadFile(){
+        let fileLoad = true;
+
+        if(fileLoad){
+            return ("File loaded");
+        }
+        else{
+            throw ("File NOT loaded");
+        }
+    };
+    async function startProcess(){
+        try{
+            let message = await loadFile();
+            console.log(message);
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+    startProcess();
+
+    // loadFile().then(value => console.log(value))
+    //         .catch(error => console.log(error));
+</script>
+</body>
+</html>

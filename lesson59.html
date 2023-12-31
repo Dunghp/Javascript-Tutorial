@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>console.time() = Start a timer you can use to <br>
+                        track how long an operation takes <br>
+                        Give each timer a unique name.</h1>
+
+
+<script>
+    // start
+    console.time("Response time");
+
+    //alert("click here OK button!");
+    setTimeout(() => console.log('Hello'), 3000);
+
+    // end
+    console.timeEnd("Response time")
+</script>
+</body>
+</html>

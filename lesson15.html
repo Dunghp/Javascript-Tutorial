@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&& and ||</title>
+</head>
+<body>
+    <h1>
+        Gives us the ability to check more than 1 condition concurrently <br>
+        && and (both conditions must be true) <br>
+        || or (either conditions can be true)
+    </h1>
+
+<script>
+    let temp = 15;
+    let sunny = true;
+
+    if(temp > 0 && temp < 30 && sunny){
+        console.log("The weather is good!");
+    }
+    else{
+        console.log("The weather is bad!");
+    }
+
+    let temperture = 15;
+
+    if(temperture <= 0 || temperture >= 30){
+        console.log("The weather is bad!");
+    }
+    else{
+        console.log("The weather is good!");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>spread operator =...= allows an iterable such as an <br>
+                        array or string to be expanded <br>
+                        in places where zero or more <br>
+                        arguments are expected <br>
+                        (unpacks the elements).</h1>
+    <p id="getText"></p>
+
+<script>
+    // let myName = 'Pro Code';
+    // console.log(...myName);
+    // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // console.log(...numbers);
+    // let maximum = Math.max(...numbers);
+    // console.log(maximum);
+
+    let class1 = ['apple', 'banana', 'lemon'];
+    let class2 = ['orange', 'coconut', 'carrot'];
+
+    class1.push(...class2);
+    console.log(...class1);
+    document.getElementById("getText").innerHTML = class1;
+</script>
+</body>
+</html>

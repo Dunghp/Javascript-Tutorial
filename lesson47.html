@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance = a child class can inherit all the <br>
+                    methods and properties from another class.</h1>
+                
+<script>
+    class Animal{
+        alive = true;
+
+        eat(){
+            console.log(`This ${this.name} is eating`);
+        }
+        sleep(){
+            console.log(`This ${this.name} is sleeping`);
+        }
+    }
+
+    class Rabbit extends Animal{
+        name = "rabbit";
+
+        run(){
+            console.log(`This ${this.name} is running`);
+        }
+    }
+
+    class Fish extends Animal{
+        name = "fish";
+
+        swim(){
+            console.log(`This ${this.name} is swimming`);
+        }
+    }
+
+    class Hawk extends Animal{
+        name = "hawk";
+
+        fly(){
+            console.log(`This ${this.name} is flying`);
+        }
+    }
+
+    const rabbit = new Rabbit();
+    const fish = new Fish();
+    const hawk = new Hawk();
+
+    console.log(fish.alive);
+    fish.eat();
+    fish.sleep();
+    fish.swim();
+</script>
+</body>
+</html>

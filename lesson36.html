@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array.reduce() = reduces an array to a single value.</h1>
+
+<script>
+    let prices = [5, 10, 15, 20, 25];
+    let total = prices.reduce(checkOut);
+
+    console.log(`The total is: $${total}`);
+    function checkOut(total, element){
+        return total + element;
+    }
+    // descending & ascending
+    let grades = [100, 50, 90, 60, 80, 70];
+    grades = grades.sort(ascendingSort); // replace descending to see result
+    grades.forEach(print);
+
+    function descendingSort(x, y){
+        return y - x;
+    }
+    function ascendingSort(x, y){
+        return x - y;
+    }
+    function print(element){
+        console.log(element);
+    }
+</script>
+</body>
+</html>

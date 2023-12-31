@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise = object that encapsulates the result of asynchronous operations <br>
+                    let asynchronous methods return values like synchronuos methods <br>
+                    'I promise to return something in the future'</h1>
+    <h2>the state is 'pending' then: 'fulfilled' or 'rejected' <br>
+        the result is what can be returned <br>
+        2 parts producing & consuming</h2>
+
+
+<script>
+    // const promise = new Promise((resolve, reject) => {
+    //     let fileLoad = false;
+
+    //     if(fileLoad){
+    //         resolve("File loaded");
+    //     }
+    //     else{
+    //         reject("File NOT loaded");
+    //     }
+    // });
+
+    // promise.then(value => console.log(value))
+    //         .catch(error => console.log(error));
+// another ex;
+    const wait = time => new Promise(resolve => {
+        setTimeout(resolve, time);
+    })
+    wait(3000).then(() => console.log("Thanks for waiting!"));
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to put an object into a function model.</h1>
+
+<script>
+    class Car{
+        constructor(model, year, color){
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+    }
+
+    const car1 = new Car('Toyota', 2000, 'red');
+    const car2 = new Car('Huyndai', 1999, 'blue');
+    const car3 = new Car('Ford', 1980, 'black');
+
+    changeColor(car3, 'gold');
+    displayInfo(car3);
+
+    function displayInfo(car){
+        console.log(car.model);
+        console.log(car.year);
+        console.log(car.color);
+    }
+
+    function changeColor(car, color){
+        car.color = color;
+    }
+</script>
+</body>
+</html>

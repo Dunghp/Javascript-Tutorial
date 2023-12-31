@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function expression = function without a name <br>
+                it also known as (anonymuos function) <br>
+                avoid polluting the global scope with names <br>
+                write it, the forget about it.</h1><hr>
+    <label for="" id="myLabel">0</label><br>
+    <!-- <button id="decreaseButton" onclick = "decreaseCount()">Decrease</button> -->
+    <!-- <button id="increaseButton" onclick = "increaseCount()">Increase</button> -->
+    <button id="decreaseButton">Decrease</button>
+    <button id="increaseButton">Increase</button>
+
+<script>
+    // sayHello();
+    // function sayHello(){
+    //     console.log("Hello!");
+    // }
+// another way to write
+    const greeting = function(){
+        console.log("Hello!");
+    }
+    greeting();
+
+    let count = 0;
+
+    // function increaseCount(){
+    //     count+=1;
+    //     document.getElementById("myLabel").innerHTML = count;
+    // }
+    // function decreaseCount(){
+    //     count-=1;
+    //     document.getElementById("myLabel").innerHTML = count;
+    // }
+// another way to do
+    document.getElementById("increaseButton").onclick = function(){
+        count+=1;
+        document.getElementById("myLabel").innerHTML = count;
+    }
+    document.getElementById("decreaseButton").onclick = function(){
+        count-=1;
+        document.getElementById("myLabel").innerHTML = count;
+    }
+</script>
+</body>
+</html>

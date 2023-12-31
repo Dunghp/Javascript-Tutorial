@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array.map() = executes a provided callback function <br>
+                once for each array element. <br>
+                AND creates a new array.</h1>
+
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+    let squares = numbers.map(square);
+    let cubes = numbers.map(cube);
+
+    cubes.forEach(print);
+
+    function square(element){
+        return Math.pow(element, 2);
+    }
+    function cube(element){
+        return Math.pow(element, 3);
+    }
+    function print(element){
+        console.log(element);
+    }
+</script>
+</body>
+</html>

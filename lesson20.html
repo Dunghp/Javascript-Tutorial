@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function = Define code once, and use it many times.
+        To perform some code, call the function name.
+    </h1>
+
+<script>
+    startProgram();
+
+    function startProgram(){
+        let userName = 'Pro';
+        let age = 20;
+
+        happyBirthday(userName, age);
+    }
+    function happyBirthday(userName, age){
+        console.log('Happy birthday to you!');
+        console.log('Happy birthday to you!');
+        console.log('Happy birthday dear!', userName);
+        console.log('Happy birthday to you!');
+        console.log('You are', age, 'years old.');
+    }
+</script>
+</body>
+</html>

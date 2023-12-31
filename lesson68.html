@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 360px;
+            height: 200px;
+            margin-top: 20px;
+            border: 6px solid red;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click here to do Something!</button>
+    <input type="text" id="myText">
+    <div id="myDiv">This my area...</div>
+
+
+<script>
+    // const element = document.getElementById("myButton");
+    // element.onclick = doSomething;
+
+    // const element = document.body;
+    // element.onload = doSomething;
+
+    // const element = document.getElementById("myText");
+    // element.onchange = doSomething;
+
+    const element = document.getElementById("myDiv");
+    
+    // element.onmouseover = doSomething;
+    // element.onmouseout = doSomethingElse;
+    element.onmousedown = doSomething;
+    element.onmouseup = doSomethingElse;
+
+    function doSomething(){
+        // alert("You did something!");
+        element.style.backgroundColor = "red";
+    }
+    function doSomethingElse(){
+        // alert("You did something!");
+        element.style.backgroundColor = "lightgreen";
+    }
+</script>
+</body>
+</html>

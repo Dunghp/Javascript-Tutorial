@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>nested function = Functions inside other functions. <br>
+                        outer functions have access to inner functions. <br>
+                        Inner functions are 'hidden' from outside the outer funtion. <br>
+                        used in closures (future video topic)</h1>
+
+<script>
+    let userName = 'Pro';
+    let userInbox = 0;
+
+    // login(); two lines below without login
+    // displayUserName();
+    // displayUserInbox();
+
+    // function login(){
+    //     displayUserName();
+    //     displayUserInbox();
+    // }
+    // function displayUserName(){
+    //     console.log(`wellcome ${userName}`);
+    // }
+    // function displayUserInbox(){
+    //     console.log(`You have ${userInbox} new messages`);
+    // }
+
+    // nested login
+    login();
+    function login(){
+        displayUserName();
+        displayUserInbox();
+        function displayUserName(){
+            console.log(`wellcome ${userName}`);
+        }
+        function displayUserInbox(){
+            console.log(`You have ${userInbox} new messages`);
+        }
+    }
+</script>
+</body>
+</html>

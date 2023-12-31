@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array.filter() = creates a new array with all elements <br>
+                that pass the test provided by a function.</h1>
+    
+<script>
+    let ages =[18, 16, 21, 17, 19, 90];
+    let adults = ages.filter(checkAge);
+
+    adults.forEach(print);
+
+    function checkAge(element){
+        return element >= 18;
+    }
+    function print(element){
+        console.log(element);
+    }
+</script>
+</body>
+</html>

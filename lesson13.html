@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="myCheckBox">Subcribe</label>
+    <input type="checkbox" id="myCheckBox"><br>
+
+    <label for="visaBtn">Visa</label>
+    <input type="radio" name="card" id="visaBtn">
+    <label for="masterBtn">Master</label>
+    <input type="radio" name="card" id="masterBtn">
+    <label for="paypalBtn">Paypal</label>
+    <input type="radio" name="card" id="paypalBtn"><br>
+    <button id="myButton">Submit</button>
+
+<script>
+    // document.getElementById("myButton").onclick = function(){
+    //     if(document.getElementById("myCheckBox").checked){
+    //         console.log("You are subcribed!");
+    //     }
+    //     else{
+    //         console.log("You are not subcribed!");
+    //     }
+    // }
+    document.getElementById("myButton").onclick = function(){
+        const myCheckBox = document.getElementById("myCheckBox");
+        const visaBtn = document.getElementById("visaBtn");
+        const masterBtn = document.getElementById("masterBtn");
+        const paypalBtn = document.getElementById("paypalBtn");
+
+        if(myCheckBox.checked){
+            console.log("You are subcribed!");
+        }
+        else{
+            console.log("You are not subcribed!");
+        }
+
+        if(visaBtn.checked){
+            console.log("You are paying with Visa!");
+        }
+        else if(masterBtn.checked){
+            console.log("You are paying with Master!");
+        }
+        else if(paypalBtn.checked){
+            console.log("Your are paying with Paypal!");
+        }
+        else{
+            console.log("You have to choose a payment!");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>static = belongs to the class, not the objects <br>
+                properties: useful for caches, fixed-configguration <br>
+                methods: useful for utility functions.</h1>
+
+<script>
+    class Car{
+        static numberOfCars = 0;
+
+        constructor(model){
+            this.model = model;
+            Car.numberOfCars += 1;
+        }
+        static startRace(){
+            console.log("3...2...1...GO1");
+        }
+    }
+
+    const car1 = new Car("Toyota");
+    const car2 = new Car("Huyndai");
+    const car3 = new Car("Honda");
+    const car4 = new Car("BMV");
+    const car5 = new Car("Ford");
+
+    console.log(Car.numberOfCars);
+
+    Car.startRace();
+</script>
+</body>
+</html>

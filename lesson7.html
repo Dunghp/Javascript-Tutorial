@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppin", sans-serif;
+        }
+        h1{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #countLabel{
+            display: block;
+            text-align: center;
+            font-size: 30px;
+        }
+        .material-symbols-outlined{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            margin: 20px;
+            padding: 5px;
+            background-color: green;
+            border-radius: 6px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating a counter.</h1>
+    <label id="countLabel">0</label>
+    <span class="material-symbols-outlined">favorite</span>
+    <div>
+        <button id="decreaseBtn">Decrease</button>
+        <button id="resetBtn">Reset</button>
+        <button id="increaseBtn">Increase</button>
+    </div>
+
+<script>
+    let count = 0;
+
+    document.getElementById("decreaseBtn").onclick = function(){
+        count-=1;
+        document.getElementById("countLabel").innerHTML = count;
+    }
+    document.getElementById("resetBtn").onclick = function(){
+        count=0;
+        document.getElementById("countLabel").innerHTML = count;
+    }
+    document.getElementById("increaseBtn").onclick = function(){
+        count+=1;
+        document.getElementById("countLabel").innerHTML = count;
+    }
+    
+    
+</script>
+</body>
+</html>

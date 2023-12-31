@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myImage{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Toggle</button>
+    <image id="myImage" src="car.png" style="visibility: hidden;">
+    <p>Press the button...</p>
+
+<script>
+    const myButton = document.querySelector("#myButton");
+    const myImage = document.querySelector("#myImage");
+
+    myButton.addEventListener("click", () => {
+        if(myImage.style.visibility == "hidden"){
+            myImage.style.visibility = "visible";
+        }
+        else{
+            myImage.style.visibility = "hidden";
+        }
+    })
+</script>
+</body>
+</html>

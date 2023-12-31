@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Convert the temperature.</h1>
+    <label for="">Enter your Temperature</label><br>
+    <input type="text" id="textBox"><br>
+
+    <label for="">Convert to:</label><br>
+    <input type="radio" id="cButton">
+    <label for="">Celsius</label><br>
+    <input type="radio" id="fButton">
+    <label for="">Fehrenheit</label><br>
+
+    <button type="submit" id="submitButton">Submit</button><br>
+    <label id="tempLabel"></label>
+<script>
+    // let temp = 32;
+    // temp = toFahrenheit(temp);
+    // console.log(temp);
+
+    document.getElementById("submitButton").onclick = function(){
+        let temp;
+
+        if(document.getElementById("cButton").checked){
+            temp = document.getElementById("textBox").value;
+            temp = Number(temp);
+            temp = toCelsius(temp);
+            document.getElementById("tempLabel").innerHTML = temp + "°C";
+        }
+        else if(document.getElementById("fButton").checked){
+            temp = document.getElementById("textBox").value;
+            temp = Number(temp);
+            temp = toFahrenheit(temp);
+            document.getElementById("tempLabel").innerHTML = temp + "°F";
+
+        }
+        else{
+            document.getElementById("tempLabel").innerHTML = "Select a unit";
+        }
+    }
+
+    function toCelsius(temp){
+        return (temp - 32) * (5/9);
+    }
+
+    function toFahrenheit(temp){
+        return temp * 9/5 + 32;
+    }
+</script>
+</body>
+</html>

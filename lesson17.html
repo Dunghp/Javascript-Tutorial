@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while loop = repeat some code while some condition is true potentially infinite.</h1><br>
+    <h2>do while loop = do something, then check the condition,
+        repeat if condition is true.</h2>
+    <h3>for loop = repeat some code a certain amount of times.</h3>
+
+<script>
+    let userName = "";
+
+    while(userName == "" || userName == null){
+        userName = window.prompt("Enter your name, please!");
+    }
+// one can escape----one can not escape
+    // let userName;
+
+    // do{
+    //     userName = window.prompt("Enter your namel, please!");
+    // }while(userName == "")
+
+    console.log("Hello", userName);
+// count up
+    for(let counter = 1; counter <= 100; counter+=1){
+        console.log(counter);
+    }
+// count down
+    for(let i = 10; i > 0; i-=1){
+        console.log(i);
+    }
+    console.log("Happy new year!")
+
+</script>
+</body>
+</html>

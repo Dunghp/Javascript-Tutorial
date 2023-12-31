@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array = think of it as a variable <br>
+                that can store multiple values.</h1>
+
+<script>
+    // let fruits = ["apple", "orange", "banana"];
+
+    // fruits[2] = "coconut"; //replace
+    // fruits.push("lemon");     // add an element
+    // fruits.pop();             // remove last element
+    // fruits.unshift("mango");  // add element to beginning
+    // fruits.shift();           // removes element from beginning
+    // console.log(fruits);
+
+    // let length = fruits.length;
+    // console.log(length);
+    // let index = fruits.indexOf("orange");
+    // console.log(index);
+
+    let prices = [5, 10, 15, 20, 25];
+
+    for(let i = 0; i < prices.length; i+=1){
+        console.log(prices[i]);
+    }
+// sorted
+    for(let i = prices.length-1; i >= 0; i-=1){
+        console.log(prices[i]);
+    }
+
+    for(let i of prices){
+        console.log(i);
+    }
+    for(let price of prices){
+        console.log(price);
+    }
+// another sorted method
+    let cars = ['toyota', 'honda', 'huyndai', 'kia'];
+
+    cars = cars.sort();
+    cars = cars.sort().reverse();
+
+    for(let car of cars){
+        console.log(car);
+    }
+
+</script>
+</body>
+</html>
